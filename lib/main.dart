@@ -1,14 +1,19 @@
 import 'package:bookly/core/helpers/constants.dart';
-import 'package:bookly/features/splash/presentation/views/splash_view.dart';
+import 'package:bookly/core/routing/app_router.dart';
+import 'package:bookly/core/routing/routes_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(const BooklyApp());
+  runApp(BooklyApp(
+    appRouter: AppRouter(),
+  ));
 }
 
 class BooklyApp extends StatelessWidget {
-  const BooklyApp({super.key});
+  final AppRouter appRouter;
+
+  const BooklyApp({super.key, required this.appRouter});
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -20,7 +25,8 @@ class BooklyApp extends StatelessWidget {
             theme: ThemeData.dark().copyWith(
               scaffoldBackgroundColor: kPrimaryColor,
             ),
-            home: SplashView(),
+            initialRoute: Routes.splashView,
+            onGenerateRoute: appRouter.generateRoute,
           );
         });
   }
