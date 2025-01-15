@@ -14,10 +14,11 @@ class HomeViewBody extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomAppBar(),
             FeaturedBooksListView(),
-            verticalSpace(50),
+            verticalSpace(15),
             Text(
               'Best Sellers',
               style: AppTextStyles.titleMedium,
