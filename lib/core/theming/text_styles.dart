@@ -10,7 +10,6 @@ class AppTextStyles {
   static TextStyle textStyle20Normal = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.normal,
-    fontFamily: AssetsData.kGtSectraFine,
   );
   static TextStyle textStyle30Normal = TextStyle(
     fontSize: 30.sp,
