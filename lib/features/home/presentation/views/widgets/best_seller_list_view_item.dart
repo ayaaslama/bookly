@@ -3,7 +3,7 @@ import 'package:bookly/core/helpers/extentions.dart';
 import 'package:bookly/core/helpers/spacing.dart';
 import 'package:bookly/core/shared_widgets/book_image_conrainer.dart';
 import 'package:bookly/core/theming/text_styles.dart';
-import 'package:bookly/features/home/presentation/views/widgets/book_price_and_rating.dart';
+import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,7 +43,17 @@ class BestSellerListViewItem extends StatelessWidget {
                     style: AppTextStyles.textStyle14Normal,
                   ),
                   verticalSpace(3),
-                  BookPriceAndRating()
+                  Row(
+                    children: [
+                      Text(
+                        '4.5 \$',
+                        style: AppTextStyles.textStyle20Normal
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      BookRating(),
+                    ],
+                  ),
                 ],
               ),
             )
