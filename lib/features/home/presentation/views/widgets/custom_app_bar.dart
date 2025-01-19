@@ -1,4 +1,6 @@
 import 'package:bookly/core/helpers/assets.dart';
+import 'package:bookly/core/helpers/extentions.dart';
+import 'package:bookly/core/routing/routes_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,9 +21,11 @@ class CustomAppBar extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.search,
-              size: 24.sp,
+              size: 22.sp,
             ),
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.searchView);
+            },
           ),
         ],
       ),
