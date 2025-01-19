@@ -2,7 +2,7 @@ import 'package:bookly/core/helpers/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppTextStyles {
+abstract class AppTextStyles {
   static TextStyle textStyle18SemiBold = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
