@@ -1,3 +1,4 @@
+import 'package:bookly/core/di/dependency_injection.dart';
 import 'package:bookly/core/helpers/constants.dart';
 import 'package:bookly/core/routing/app_router.dart';
 import 'package:bookly/core/routing/routes_names.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  setupGetIt();
   runApp(BooklyApp(
     appRouter: AppRouter(),
   ));
