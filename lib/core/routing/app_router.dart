@@ -21,21 +21,17 @@ class AppRouter {
 
       case Routes.homeView:
         return MaterialPageRoute(
-          builder: (_) => MultiBlocProvider(
-            providers: [
-              BlocProvider(
-                create: (context) => FeaturedBooksCubit(
-                  getIt.get<HomeRepoImpl>(),
-                ),
+          builder: (_) => MultiBlocProvider(providers: [
+            BlocProvider(
+              create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
+                ..fetchFeaturedBooks(),
+            ),
+            BlocProvider(
+              create: (context) => NewestBooksCubit(
+                getIt.get<HomeRepoImpl>(),
               ),
-              BlocProvider(
-                create: (context) => NewestBooksCubit(
-                  getIt.get<HomeRepoImpl>(),
-                ),
-              ),
-            ],
-            child: const HomeView(),
-          ),
+            ),
+          ], child: const HomeView()),
         );
 
       case Routes.bookDetailsView:

@@ -12,8 +12,8 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
-      var data =
-          await apiService.get(endPoint: ApiConstants.newestBooksEndpoint);
+      var data = await apiService.get(
+          endPoint: ApiConstants.apiBaseUrl + ApiConstants.newestBooksEndpoint);
 
       List<BookModel> books = [];
 
@@ -39,7 +39,8 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
-      var data = await apiService.get(endPoint: ApiConstants.allBooksEndpoint);
+      var data = await apiService.get(
+          endPoint: ApiConstants.apiBaseUrl + ApiConstants.allBooksEndpoint);
 
       List<BookModel> books = [];
 
