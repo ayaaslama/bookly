@@ -16,7 +16,10 @@ class SimilarBooksListView extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 4.0.w),
-            child: BookImageContainer(),
+            child: BookImageContainer(
+              imageUrl:
+                  'https://i0.wp.com/thepythoncodingbook.com/wp-content/uploads/2024/03/FRONT-for-ebook.jpg?resize=1200%2C1478&ssl=1',
+            ),
           );
         },
       ),

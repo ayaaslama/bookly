@@ -1,4 +1,3 @@
-import 'package:bookly/features/home/presentation/views/widgets/book_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,7 +11,10 @@ class SearchResultListView extends StatelessWidget {
         (BuildContext context, int index) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-            child: BookListViewItem(),
+            // child: BookListViewItem(
+            //   imageUrl: '',
+            // ),
+            child: Text('data'),
           );
         },
         childCount: 10,
