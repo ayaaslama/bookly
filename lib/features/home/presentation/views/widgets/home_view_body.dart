@@ -1,8 +1,8 @@
 import 'package:bookly/core/helpers/spacing.dart';
 import 'package:bookly/core/theming/text_styles.dart';
-import 'package:bookly/features/home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/featured_books_list_view.dart';
+import 'package:bookly/features/home/presentation/views/widgets/newest_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,7 +27,7 @@ class HomeViewBody extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.w),
                 child: Text(
-                  'Best Sellers',
+                  'Newest Books',
                   style: AppTextStyles.textStyle18SemiBold,
                 ),
               ),
@@ -35,7 +35,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        BestSellerListView(),
+        NewestBooksListView(),
       ],
     );
   }
