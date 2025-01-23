@@ -1,12 +1,14 @@
 import 'package:bookly/core/di/dependency_injection.dart';
+import 'package:bookly/core/models/book_model/book_model.dart';
 import 'package:bookly/core/routing/routes_names.dart';
-import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/data/repos/home_repo_impl.dart';
 import 'package:bookly/features/home/presentation/manager/cubit/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly/features/home/presentation/manager/cubit/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly/features/home/presentation/manager/cubit/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly/features/home/presentation/views/book_details_view.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
+import 'package:bookly/features/search/data/repos/search_repo_impl.dart';
+import 'package:bookly/features/search/presentation/manager/cubit/search_cubit.dart';
 import 'package:bookly/features/search/presentation/views/search_view.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +52,10 @@ class AppRouter {
 
       case Routes.searchView:
         return MaterialPageRoute(
-          builder: (_) => const SearchView(),
+          builder: (_) => BlocProvider(
+            create: (context) => SearchCubit(getIt.get<SearchRepoImpl>()),
+            child: const SearchView(),
+          ),
         );
       default:
         return MaterialPageRoute(

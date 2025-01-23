@@ -1,9 +1,9 @@
 import 'package:bookly/core/helpers/assets.dart';
 import 'package:bookly/core/helpers/extentions.dart';
 import 'package:bookly/core/helpers/spacing.dart';
+import 'package:bookly/core/models/book_model/book_model.dart';
 import 'package:bookly/core/shared_widgets/book_image_conrainer.dart';
 import 'package:bookly/core/theming/text_styles.dart';
-import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_page_count.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

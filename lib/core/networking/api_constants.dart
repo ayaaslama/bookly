@@ -6,4 +6,7 @@ class ApiConstants {
       "volumes?Filtering=free-ebooks&q=Programming";
   static const String similarBooksEndpoint =
       "volumes?Filtering=free-ebooks&q=Programming&Sorting=relevance";
+  static String searchBooksEndpoint(String query) {
+    return "volumes?Filtering=free-ebooks&q=$query";
+  }
 }

@@ -9,17 +9,13 @@ class CustomBookDetailsAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 20.h, bottom: 20.h),
-      child: Row(
-        children: [
-          IconButton(
-              onPressed: () {
-                context.pop();
-              },
-              icon: Icon(Icons.close)),
-          Spacer(),
-          IconButton(
-              onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined)),
-        ],
+      child: Align(
+        alignment: Alignment.topRight,
+        child: IconButton(
+            onPressed: () {
+              context.pop();
+            },
+            icon: Icon(Icons.close)),
       ),
     );
   }
