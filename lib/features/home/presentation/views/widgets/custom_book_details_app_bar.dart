@@ -1,3 +1,4 @@
+import 'package:bookly/core/helpers/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,7 +11,11 @@ class CustomBookDetailsAppBar extends StatelessWidget {
       padding: EdgeInsets.only(top: 20.h, bottom: 20.h),
       child: Row(
         children: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+          IconButton(
+              onPressed: () {
+                context.pop();
+              },
+              icon: Icon(Icons.close)),
           Spacer(),
           IconButton(
               onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined)),
