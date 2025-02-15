@@ -1,4 +1,4 @@
-# Bookly App 📚
+# Bookly 📚
 
 Welcome to **Bookly App**, Your ultimate app for discovering and enjoying a wide range of books, from thrilling novels to insightful non-fiction, all in one place.
 
@@ -20,15 +20,12 @@ https://github.com/user-attachments/assets/ad23ed30-dae1-45d0-bbb9-b098c6c47d34
 - 🔷 Dart: The programming language used to develop the app.
 - 📡 REST APIs: For fetching real-time book data.
 - 📦 Cubit: For state management using the BLoC pattern, providing a reactive architecture.
-- 💾 Hive Package: For efficient local storage and management of user data and book preferences.
 - ⏳ Shimmer: Used for implementing loading placeholders during data fetch.
 - 📱 Dependency Injection (DI): To manage and inject dependencies seamlessly across the app.
 - 📐 MVVM (Model-View-ViewModel): An architectural pattern used to separate the UI from business logic, ensuring clear separation of concerns between the UI and underlying data.
-
-
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ayaaslama/clean_arch_bookly_app.git
+   git clone https://github.com/ayaaslama/bookly.git
